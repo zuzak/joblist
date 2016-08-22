@@ -1,0 +1,19 @@
+{
+  "name": "jobboard",
+  "version": "1.0.0",
+  "description": "Simple job applicant listing website",
+  "main": "server.js",
+  "scripts": {
+    "test": "node_modules/jshint/bin/jshint *.js && node_modules/mocha/bin/mocha test/*.js"
+  },
+  "author": "Douglas Gardner <douglas@chippy.ch>",
+  "license": "ISC",
+  "devDependencies": {
+    "jshint": "^2.5.4",
+    "mocha": "^3.0.2",
+    "supertest": "^2.0.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

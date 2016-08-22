@@ -1,0 +1,26 @@
+{
+	// enforcing
+	"bitwise": true,
+	"curly": true,
+	"eqeqeq": true,
+	"latedef": true,
+	"noarg": true,
+	"nonew": true,
+	"quotmark": "single",
+	"strict": false,
+	"undef": true,
+	"unused": true,
+
+	// relaxing
+	"esversion": 6,
+
+	// environment
+	"node": true,
+
+	// test opt-outs that really need to be sorted properly
+	"predef": [
+		"describe",
+		"it",
+		"__rootdir" // defined in server.js
+	]
+}
