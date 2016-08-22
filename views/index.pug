@@ -1,0 +1,14 @@
+html
+	head
+		title foo
+	body
+		h1 Hello, World!
+
+		h2 Job Applicants
+		ul
+			- foo = 0
+			each applicant in applicants
+				li
+					a(href='/applicant/' + foo)= applicant.name
+				- foo++
+
