@@ -13,7 +13,7 @@ var applicants = require( path.join( __dirname, 'data/applicants.json' ) );
 app.set( 'view engine', 'pug' );
 
 // SASS middleware
-app.use( sass ({
+app.use( sass ( {
 	src: path.join(__dirname),
 	includePaths: [
 		// import required GDS toolkit SASS:
