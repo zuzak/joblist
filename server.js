@@ -36,7 +36,7 @@ app.use( '/public', express.static( path.join(
 
 // routes
 app.get( '/', function ( req, res ) { // homepage
-	res.render( 'index.pug', { applicants: applicants } );
+	res.render( 'index.pug', { applicants } );
 } );
 
 app.use( express.static( path.join( __dirname, 'public' ) ) );
