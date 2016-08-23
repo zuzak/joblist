@@ -17,10 +17,9 @@
 	// environment
 	"node": true,
 
-	// test opt-outs that really need to be sorted properly
+	// these are used in Mocha for test purposes
 	"predef": [
 		"describe",
-		"it",
-		"__rootdir" // defined in server.js
+		"it"
 	]
 }
