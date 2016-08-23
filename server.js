@@ -39,8 +39,6 @@ app.get( '/', function ( req, res ) { // homepage
 	res.render( 'index.pug', { applicants } );
 } );
 
-app.use( express.static( path.join( __dirname, 'public' ) ) );
-
 app.get( '/applicant/:key', function ( req, res ) {
 	// it's a little suspect just using a sequential number as the path
 	// in my URL, but for my purposes, where I know the data doesn't change
