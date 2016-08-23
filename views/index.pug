@@ -1,7 +1,7 @@
 extends grid
 
 block title
-	title foo
+	title Job Applicants
 
 block content
 	div.grid-row
@@ -12,9 +12,9 @@ block content
 			There are #{applicants.length} #{plural} for this position.
 			Click on their name below to view them in further detail.
 		ul.list.list-bullet
-			- foo = 0
+			- i = 0
 			each applicant in applicants
 				li
-					a(href='/applicant/' + foo)= applicant.name
-				- foo++
+					a(href='/applicant/' + i)= applicant.name
+				- i++
 
