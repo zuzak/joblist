@@ -30,3 +30,8 @@ npm test
 ## Running
 
 To run the code, issue `npm start` before pointing your browser at port 3000.
+
+## Contributing
+
+This project vaguely utilises the
+[MediaWiki coding conventions for JavaScript](https://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript).
