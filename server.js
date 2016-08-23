@@ -14,7 +14,7 @@ var applicants = require( path.join( __dirname, 'data/applicants.json' ) );
 app.set( 'view engine', 'pug' );
 
 // SASS middleware
-app.use( sass )({
+app.use( sass ({
   src: path.join(__dirname),
   includePaths: [
 	  // import required GDS toolkit SASS:
@@ -26,7 +26,7 @@ app.use( sass )({
   debug: true,
   indentedSyntax: false,
   sourceMap: true
-}));
+} ) );
 // serve my CSS
 app.use( '/public', express.static( path.join( __dirname, 'public' ) ) );
 // serve GDS assets under /public (seems hardcoded?)
