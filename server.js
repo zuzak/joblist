@@ -14,16 +14,16 @@ app.set( 'view engine', 'pug' );
 
 // SASS middleware
 app.use( sass ({
-  src: path.join(__dirname),
-  includePaths: [
-	  // import required GDS toolkit SASS:
-	  path.join( __dirname, 'node_modules/govuk_frontend_toolkit/stylesheets' ),
-	  // and because I found it lying around:
-	  path.join( __dirname, 'node_modules/govuk-elements-sass/public/sass' )
-  ],
-  dest: path.join(__dirname),
-  indentedSyntax: false,
-  sourceMap: true
+	src: path.join(__dirname),
+	includePaths: [
+		// import required GDS toolkit SASS:
+		path.join( __dirname, 'node_modules/govuk_frontend_toolkit/stylesheets' ),
+		// and because I found it lying around:
+		path.join( __dirname, 'node_modules/govuk-elements-sass/public/sass' )
+	],
+	dest: path.join(__dirname),
+	indentedSyntax: false,
+	sourceMap: true
 } ) );
 
 // serve my CSS
