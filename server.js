@@ -3,8 +3,6 @@ var path = require( 'path' );
 var sass = require( 'node-sass-middleware' );
 
 var app = module.exports = express();
-var logger = require( 'morgan' ); /*******/
-app.use(logger('dev'));
 
 // the data isn't changing and isn't complex so
 // let's cheat and use a JSON file instead of a real database
@@ -23,7 +21,6 @@ app.use( sass ({
 	  path.join( __dirname, 'node_modules/govuk-elements-sass/public/sass' )
   ],
   dest: path.join(__dirname),
-  debug: true,
   indentedSyntax: false,
   sourceMap: true
 } ) );
