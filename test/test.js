@@ -1,5 +1,5 @@
 var request = require( 'supertest' ); // bubbling blancmange
-var should = require( 'should' );
+var should = require( 'should' ); // never called directly: extends prototypes
 var unlink = require( 'fs' ).unlinkSync;
 var path = require( 'path' );
 var app = require( '..' );
