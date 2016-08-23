@@ -1,5 +1,7 @@
 var request = require( 'supertest' ); // bubbling blancmange
 var should = require( 'should' );
+var unlink = require( 'fs' ).unlinkSync;
+var path = require( 'path' );
 var app = require( '..' );
 
 describe( 'running Express.js', function () {
@@ -7,6 +9,32 @@ describe( 'running Express.js', function () {
 		request( app )
 			.get( '/foo' )
 			.expect( 404, done );
+	} );
+} );
+
+describe( 'static files', function () {
+	before( function () {
+		try {
+			unlink( path.join ( __dirname, '/public/index.css' ) );
+		} catch ( e ) {
+			if ( e.code === 'ENOENT' ) { // i.e. file already gone
+				return;
+			}
+			throw e;
+		}
+	} );
+	it( 'serves CSS pages', function ( done ) {
+		// this test will break if SASS stops working nicely
+		request( app )
+			.get( '/public/index.css' )
+			.expect( 200, done );
+	} );
+	it( 'serves images', function ( done ) {
+		// this test will break if GDS assets don't work
+		request( app )
+			.get( '/public/images/icon-search.png' ) // picked at random
+			.expect( 'Content-Type', 'image/png' )
+			.expect( 200, done );
 	} );
 } );
 
