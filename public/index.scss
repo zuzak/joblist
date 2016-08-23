@@ -1,0 +1,51 @@
+@import '_typography';
+@import '_colours';
+@import 'design-patterns/alpha-beta';
+@import 'design-patterns/_breadcrumbs';
+
+@import '_govuk-elements';
+
+
+h1 {
+	@include heading-36;
+}
+
+h2 {
+	@include heading-27;
+}
+
+body {
+	@include copy-19;
+}
+a {
+	color: $home-office;
+}
+
+.phase-banner {
+	@include phase-banner(alpha);
+}
+
+#page-container {
+	@extend %site-width-container;
+}
+
+.breadcrumbs {
+	@include breadcrumbs;
+}
+
+#header {
+	background-color: black !important;
+	color: white;
+	display: block;
+	white-space: pre;
+	width: 100%;
+	margin: 0;
+	margin-top: -1em;
+	margin-left: 0;
+}
+#header h1 {
+	/* https://govuk-elements.herokuapp.com/layout/#page-width */
+	max-width: 1020px;
+	margin: auto;
+	padding: 1em;
+}

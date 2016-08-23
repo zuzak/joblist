@@ -1,0 +1,20 @@
+doctype html
+html
+	head
+		block title
+		block css
+			link(rel='stylesheet', href='/public/index.css')
+
+	body.government
+		block header
+			div#header
+				h1 Job Applicant Interface
+		div#page-container
+			block breadcrumbs
+				div.breadcrumbs
+					ol(role='breadcrumbs')
+						li
+							a(href='/') Home
+							block breadcrumb
+			block content
+

@@ -1,16 +1,24 @@
-html
-	head
-		title= applicant.name
-	body
-		h1= applicant.name
-		table
-			tr
-				th Name
-				td= applicant.name
-			tr
-				th
-					abbr(title="Date of Birth") DoB
-				td= applicant.dob
-			tr
-				th Experience
-				td= applicant.exp
+extends grid
+block title
+	title= applicant.name
+block append breadcrumb
+	li= applicant.name
+block content
+	div.grid-row
+		div.column-two-thirds
+			h1= applicant.name
+	div.grid-row
+		div.column-one-third
+			table
+				tr
+					th Name
+					td= applicant.name
+				tr
+					th
+						abbr(title="Date of Birth") DoB
+					td= applicant.dob
+		div.column-two-thirds
+			h2 Experience
+			- paragraphs= applicant.exp.split( '\n\n' )
+			each paragraph in paragraphs
+				p= paragraph
