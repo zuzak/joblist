@@ -12,6 +12,7 @@ npm install
 ## Tests
 
 [![Build Status](https://travis-ci.org/zuzak/joblist.svg?branch=master)](https://travis-ci.org/zuzak/joblist)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c1a296603fdf4ebab4b717f58ac7ee53)](https://www.codacy.com/app/douglas/joblist?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=zuzak/joblist&amp;utm_campaign=Badge_Grade)
 
 Rudimentary tests are included. They run using [mocha](https://mochajs.org/)
 as the framework, and use supertest for simple HTTP request based tests.
@@ -24,6 +25,7 @@ To run the tests, yourself, simply issue:
 ```
 npm test
 ```
+
 
 ## Running
 
