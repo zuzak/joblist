@@ -1,6 +1,7 @@
 var express = require( 'express' ); // web framework
 var path = require( 'path' );
 var sass = require( 'node-sass-middleware' ); // SASS -> CSS on-the-fly
+var helmet = require( 'helmet' );
 
 var app = module.exports = express();
 
@@ -25,6 +26,8 @@ app.use( sass ( {
 	indentedSyntax: false,
 	sourceMap: true
 } ) );
+
+app.use( helmet() ); // HO security guide for devs
 
 // serve my CSS
 app.use( '/public', express.static( path.join( __dirname, 'public' ) ) );
