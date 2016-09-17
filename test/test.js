@@ -15,7 +15,7 @@ describe( 'running Express.js', function () {
 describe( 'static files', function () {
 	before( function () {
 		try {
-			unlink( path.join ( __dirname, '/public/index.css' ) );
+			unlink( path.join ( __dirname, 'public', 'index.css' ) );
 		} catch ( e ) {
 			if ( e.code === 'ENOENT' ) { // i.e. file already gone
 				return;
